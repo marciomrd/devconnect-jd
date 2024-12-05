@@ -1,0 +1,295 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(../assets/background-login.jpg);
+    background-size: cover;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .container {
+    width: 90%;
+    height: 80%;
+
+    border-radius: 10px;
+    background: white;
+  }
+  
+  .container-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 70px;
+    margin: auto 12px;
+  }
+  
+  .container-header span {
+    color: purple;
+    word-break: break-all;
+
+    font-weight: 900;
+    font-size: 20px;
+  }
+  
+  #new {
+    padding: 8px;
+    color: white;
+    background-color: purple;
+
+    font-weight: bolder;
+    font-size: 16px;
+
+    border-radius: 40px;
+    border: none;
+  }
+
+  #new:hover {
+    color: #333;
+    background-color: violet;
+
+    transition: background-color ease 0.4s;
+  }
+
+  #logout {
+    
+    margin-top: 20px;
+
+    width: 250px;
+    height: 45px;
+
+    background-color: purple;
+    color: #fff;
+
+    border-radius: 40px;
+    border: none;
+
+    font-size: 16px;
+    font-weight: bolder;
+  }
+
+  #logout:hover {
+    color: #333;
+    background-color: violet;
+
+    transition: background-color ease 0.4s;
+  }
+  
+  .divTable {
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    width: auto; 
+    height:inherit;
+    
+    padding: 10px;
+    overflow:auto;
+  }
+  
+  .divTable::-webkit-scrollbar {
+    width: 12px;
+    background-color: whitesmoke; 
+  }
+  
+  .divTable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgray; 
+  }
+  
+  table {
+    width: 100%;
+    word-break: break-all;
+
+    border-spacing: 10px;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: whitesmoke;
+  }
+  
+  tr {
+    border-bottom: 1px solid rgb(238, 235, 235)!important;
+  }
+  
+  tbody tr td {
+    vertical-align: text-top;
+    padding: 6px;
+    max-width: 50px;
+  }
+  
+  thead tr th {
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 50px;
+  }
+  
+  tbody tr {
+    margin-bottom: 50px;
+  }
+  
+  thead tr th.acao {
+    width: 100px!important;
+    text-align: center;
+  }
+  
+  tbody tr td.acao {
+    text-align: center;
+  }
+  
+  @media (max-width: 700px) {
+    body {
+      font-size: 10px;
+    }
+    
+    .header span {
+      font-size: 15px;
+    }
+  
+    #new {
+      padding: 5px;
+      font-size: 10px;
+    }
+  
+    thead tr th.acao {
+      width: auto!important;
+    }
+    
+    td button i {
+      font-size: 20px!important;
+    }
+  
+    td button i:first-child {
+      margin-right: 0;
+    }
+  
+    .modal {
+      width: 90%!important;
+    }
+  
+    .modal label {
+      font-size: 12px!important;
+    }
+  }
+  
+  .modal-container {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: white;
+    border-radius: 10px;
+
+    padding: 40px;
+    width: 50%;
+  }
+  
+  .modal label {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .modal input {
+    width: 100%;
+    outline: none;
+
+    padding: 5px 10px; 
+    margin-bottom: 20px;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .modal button {
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px 10px; 
+
+    outline: none;
+    border-radius: 20px;
+
+    border: none;
+    background-color: purple;
+    color: white;
+  }
+
+  .modal button:hover {
+    color: #333;
+    background-color: violet;
+
+    transition: background-color ease 0.4s;
+  }
+  
+  .active {
+    display: flex;
+  }
+  
+  .active .modal {
+    animation: modal .4s;
+  }
+  
+  @keyframes modal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -60px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  td button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  td button i {
+    font-size: 25px;
+  }
+  
+  td button i:first-child {
+    margin-right: 10px;
+  }

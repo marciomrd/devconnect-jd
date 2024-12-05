@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>DevConnect</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>DevConnect</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-container">
+            <h2>Login</h2>
+
+            <form id="login-form" action="#" method="post">
+
+                <div class="field">
+                    <label for="iemail">E-mail</label>
+                    <input type="email" name="email" id="iemail" placeholder="E-mail" maxlength="30" autocomplete="on">
+                </div>
+
+                <div class="field">
+                    <label for="ipassword">Senha</label>
+                    <input type="password" name="password" id="ipassword" placeholder="Senha" minlength="8" maxlength="20" required>
+                </div>
+
+                <div class="remember-forgot">
+                    <label for="iremember"><input type="checkbox"> Lembrar de mim</label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="button">Login</button>
+            </form>
+
+            <div class="register"><p> Não tem uma conta? <a href="pages/sign-up.html">Cadastre-se</a></p></div>
+        </section>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

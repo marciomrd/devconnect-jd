@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>DevConnect</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-container">
+            <h2>Cadastro</h2>
+
+            <form id="register-form" action="#" method="post" onsubmit="return isValidPassword(event)">
+                <div class="field">
+                    <label for="iname">Nome</label>
+                    <input type="text" name="name" id="iname" placeholder="Nome completo" autocomplete="on" required>
+                </div>
+
+                <div class="field">
+                    <label for="iemail">E-mail</label>
+                    <input type="email" name="email" id="iemail" placeholder="E-mail" maxlength="30"
+                        autocomplete="on" required>
+                </div>
+
+                <div class="field">
+                    <label for="ipassword">Senha</label>
+                    <input type="password" name="password" id="ipassword" placeholder="Senha" minlength="8"
+                        maxlength="20" required>
+                </div>
+
+                <div class="field">
+                    <label for="ipassword-conf">Confirmar Senha</label>
+                    <input type="password" name="password-conf" id="ipassword-conf" placeholder="Confirmar senha"
+                        minlength="8" maxlength="20" required>
+                </div>
+
+                <div id="password-error" class="error"></div>
+
+                <button type="submit" class="button">Cadastrar</button>
+            </form>
+
+            <div class="login">
+                <p> Já tem uma conta? <a href="../index.html" target="_self">Faça Login</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
