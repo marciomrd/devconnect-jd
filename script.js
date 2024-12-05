@@ -1,3 +1,4 @@
+
 //Login auth function
 
 document.getElementById('login-form')?.addEventListener('submit', function (event) {
@@ -6,7 +7,7 @@ document.getElementById('login-form')?.addEventListener('submit', function (even
     const email = document.getElementById('iemail').value;
     const password = document.getElementById('ipassword').value;
 
-    const userData = JSON.parse(sessionStorage.getItem('userData'));
+    const userData = JSON.parse(localStorage.getItem('userData'));
 
     if (userData && userData.email === email && userData.password === password) {
        
@@ -55,7 +56,7 @@ document.getElementById('register-form')?.addEventListener('submit', function (e
 
     const userData = { name, email, password };
 
-    sessionStorage.setItem('userData', JSON.stringify(userData));
+    localStorage.setItem('userData', JSON.stringify(userData));
 
     alert('Cadastro realizado com sucesso!');
     window.location.href = '/index.html';
@@ -65,8 +66,8 @@ document.getElementById('register-form')?.addEventListener('submit', function (e
 
 document.getElementById('logout')?.addEventListener('click', function () {
    
-    sessionStorage.removeItem('authToken');
-    sessionStorage.removeItem('loggedInUser');
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('loggedInUser');
     //localStorage.removeItem('userData');
 
   

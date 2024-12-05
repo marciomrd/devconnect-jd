@@ -1,3 +1,4 @@
+
 const modal = document.querySelector('.modal-container')
 const tbody = document.querySelector('tbody')
 const sNome = document.querySelector('#m-nome')
@@ -90,7 +91,7 @@ function loadItens() {
 
 }
 
-const getItensBD = () => JSON.parse(sessionStorage.getItem('dbfunc')) ?? []
-const setItensBD = () => sessionStorage.setItem('dbfunc', JSON.stringify(itens))
+const getItensBD = () => JSON.parse(localStorage.getItem('dbfunc')) ?? []
+const setItensBD = () => localStorage.setItem('dbfunc', JSON.stringify(itens))
 
 loadItens()
